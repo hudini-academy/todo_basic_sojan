@@ -1,0 +1,318 @@
+ERROR	2024/06/04 16:25:19 server.go:3411: http: superfluous response.WriteHeader call from main.(*application).List (handlers.go:51)
+ERROR	2024/06/04 16:25:26 server.go:3411: http: superfluous response.WriteHeader call from main.(*application).List (handlers.go:51)
+ERROR	2024/06/04 16:25:26 server.go:3411: http: superfluous response.WriteHeader call from main.(*application).List (handlers.go:51)
+ERROR	2024/06/04 16:27:45 server.go:3411: http: superfluous response.WriteHeader call from main.(*application).List (handlers.go:51)
+ERROR	2024/06/04 16:27:49 server.go:3411: http: superfluous response.WriteHeader call from main.(*application).List (handlers.go:51)
+ERROR	2024/06/04 16:28:05 server.go:3411: http: superfluous response.WriteHeader call from main.(*application).List (handlers.go:51)
+ERROR	2024/06/05 16:02:26 server.go:3411: http: panic serving [::1]:54955: oops! something went wrong
+goroutine 18 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1898 +0xbe
+panic({0x1165b00?, 0x1244ef0?})
+	C:/Program Files/Go/src/runtime/panic.go:770 +0x132
+main.(*application).List(0xc000080008?, {0x12484d0, 0xc000192198}, 0xc0001ba000)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/handlers.go:28 +0x11e
+net/http.HandlerFunc.ServeHTTP(0xc00018c0d0?, {0x12484d0?, 0xc000192198?}, 0x11c6c7f?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0xc00018a5d0?, {0x12484d0, 0xc000192198}, 0xc0001ba000)
+	C:/Program Files/Go/src/net/http/server.go:2683 +0x1ad
+main.(*application).routes.secureHeaders.func2({0x12484d0, 0xc000192198}, 0xc0001ba000)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/middleware.go:19 +0xa8
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x12484d0?, 0xc000192198?}, 0xc000033ad8?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).routes.(*application).logRequest.func3({0x1248620, 0xc000198700}, 0xc0001ba000)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/middleware.go:30 +0x1ed
+net/http.HandlerFunc.ServeHTTP(0xf25639?, {0x1248620?, 0xc000198700?}, 0xc000033b68?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.serverHandler.ServeHTTP({0xc00018a4e0?}, {0x1248620?, 0xc000198700?}, 0x6?)
+	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc000188090, {0x1248c48, 0xc00018a3f0})
+	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
+ERROR	2024/06/05 16:02:26 server.go:3411: http: panic serving [::1]:54956: oops! something went wrong
+goroutine 8 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1898 +0xbe
+panic({0x1165b00?, 0x1244ef0?})
+	C:/Program Files/Go/src/runtime/panic.go:770 +0x132
+main.(*application).List(0x141c9c0?, {0x12484d0, 0xc0001921c8}, 0xc0001245a0)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/handlers.go:28 +0x11e
+net/http.HandlerFunc.ServeHTTP(0xc00018c0d0?, {0x12484d0?, 0xc0001921c8?}, 0x11c6c7f?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0xc00018a6c0?, {0x12484d0, 0xc0001921c8}, 0xc0001245a0)
+	C:/Program Files/Go/src/net/http/server.go:2683 +0x1ad
+main.(*application).routes.secureHeaders.func2({0x12484d0, 0xc0001921c8}, 0xc0001245a0)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/middleware.go:19 +0xa8
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x12484d0?, 0xc0001921c8?}, 0xc000069ad8?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).routes.(*application).logRequest.func3({0x1248620, 0xc0001988c0}, 0xc0001245a0)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/middleware.go:30 +0x1ed
+net/http.HandlerFunc.ServeHTTP(0xf25639?, {0x1248620?, 0xc0001988c0?}, 0xc000069b68?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.serverHandler.ServeHTTP({0xc00002af30?}, {0x1248620?, 0xc0001988c0?}, 0x6?)
+	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc00014a000, {0x1248c48, 0xc00018a3f0})
+	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
+ERROR	2024/06/05 16:02:26 server.go:3411: http: panic serving [::1]:54957: oops! something went wrong
+goroutine 34 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1898 +0xbe
+panic({0x1165b00?, 0x1244ef0?})
+	C:/Program Files/Go/src/runtime/panic.go:770 +0x132
+main.(*application).List(0xc000063808?, {0x12484d0, 0xc0000b6018}, 0xc0001ba480)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/handlers.go:28 +0x11e
+net/http.HandlerFunc.ServeHTTP(0xc00018c0d0?, {0x12484d0?, 0xc0000b6018?}, 0x11c6c7f?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0xc0000920c0?, {0x12484d0, 0xc0000b6018}, 0xc0001ba480)
+	C:/Program Files/Go/src/net/http/server.go:2683 +0x1ad
+main.(*application).routes.secureHeaders.func2({0x12484d0, 0xc0000b6018}, 0xc0001ba480)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/middleware.go:19 +0xa8
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x12484d0?, 0xc0000b6018?}, 0xc0001adad8?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).routes.(*application).logRequest.func3({0x1248620, 0xc0000b0000}, 0xc0001ba480)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/middleware.go:30 +0x1ed
+net/http.HandlerFunc.ServeHTTP(0xf25639?, {0x1248620?, 0xc0000b0000?}, 0xc0001adb68?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.serverHandler.ServeHTTP({0xc00018a750?}, {0x1248620?, 0xc0000b0000?}, 0x6?)
+	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc000096000, {0x1248c48, 0xc00018a3f0})
+	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
+ERROR	2024/06/05 16:02:28 server.go:3411: http: panic serving [::1]:54959: oops! something went wrong
+goroutine 36 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1898 +0xbe
+panic({0x1165b00?, 0x1244ef0?})
+	C:/Program Files/Go/src/runtime/panic.go:770 +0x132
+main.(*application).List(0xc000080008?, {0x12484d0, 0xc0001921f8}, 0xc0001246c0)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/handlers.go:28 +0x11e
+net/http.HandlerFunc.ServeHTTP(0xc00018c0d0?, {0x12484d0?, 0xc0001921f8?}, 0x11c6c7f?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0xc00018a7e0?, {0x12484d0, 0xc0001921f8}, 0xc0001246c0)
+	C:/Program Files/Go/src/net/http/server.go:2683 +0x1ad
+main.(*application).routes.secureHeaders.func2({0x12484d0, 0xc0001921f8}, 0xc0001246c0)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/middleware.go:19 +0xa8
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x12484d0?, 0xc0001921f8?}, 0xc0001adad8?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).routes.(*application).logRequest.func3({0x1248620, 0xc000198a80}, 0xc0001246c0)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/middleware.go:30 +0x1ed
+net/http.HandlerFunc.ServeHTTP(0xf25639?, {0x1248620?, 0xc000198a80?}, 0xc0001adb68?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.serverHandler.ServeHTTP({0xc00002afc0?}, {0x1248620?, 0xc000198a80?}, 0x6?)
+	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0000961b0, {0x1248c48, 0xc00018a3f0})
+	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
+ERROR	2024/06/05 16:02:28 server.go:3411: http: panic serving [::1]:54960: oops! something went wrong
+goroutine 9 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1898 +0xbe
+panic({0x1165b00?, 0x1244ef0?})
+	C:/Program Files/Go/src/runtime/panic.go:770 +0x132
+main.(*application).List(0xc000080008?, {0x12484d0, 0xc000008138}, 0xc0000d2000)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/handlers.go:28 +0x11e
+net/http.HandlerFunc.ServeHTTP(0xc00018c0d0?, {0x12484d0?, 0xc000008138?}, 0x11c6c7f?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0xc00002b0b0?, {0x12484d0, 0xc000008138}, 0xc0000d2000)
+	C:/Program Files/Go/src/net/http/server.go:2683 +0x1ad
+main.(*application).routes.secureHeaders.func2({0x12484d0, 0xc000008138}, 0xc0000d2000)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/middleware.go:19 +0xa8
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x12484d0?, 0xc000008138?}, 0xc000153ad8?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).routes.(*application).logRequest.func3({0x1248620, 0xc000156000}, 0xc0000d2000)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/middleware.go:30 +0x1ed
+net/http.HandlerFunc.ServeHTTP(0xf25639?, {0x1248620?, 0xc000156000?}, 0xc000153b68?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.serverHandler.ServeHTTP({0xc000092210?}, {0x1248620?, 0xc000156000?}, 0x6?)
+	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc00014a090, {0x1248c48, 0xc00018a3f0})
+	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
+ERROR	2024/06/05 16:02:28 server.go:3411: http: panic serving [::1]:54961: oops! something went wrong
+goroutine 22 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1898 +0xbe
+panic({0x1165b00?, 0x1244ef0?})
+	C:/Program Files/Go/src/runtime/panic.go:770 +0x132
+main.(*application).List(0xc000063808?, {0x12484d0, 0xc000008168}, 0xc0001247e0)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/handlers.go:28 +0x11e
+net/http.HandlerFunc.ServeHTTP(0xc00018c0d0?, {0x12484d0?, 0xc000008168?}, 0x11c6c7f?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0xc00002b230?, {0x12484d0, 0xc000008168}, 0xc0001247e0)
+	C:/Program Files/Go/src/net/http/server.go:2683 +0x1ad
+main.(*application).routes.secureHeaders.func2({0x12484d0, 0xc000008168}, 0xc0001247e0)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/middleware.go:19 +0xa8
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x12484d0?, 0xc000008168?}, 0xc0001adad8?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).routes.(*application).logRequest.func3({0x1248620, 0xc0001561c0}, 0xc0001247e0)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/middleware.go:30 +0x1ed
+net/http.HandlerFunc.ServeHTTP(0xf25639?, {0x1248620?, 0xc0001561c0?}, 0xc0001adb68?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.serverHandler.ServeHTTP({0xc00002b1a0?}, {0x1248620?, 0xc0001561c0?}, 0x6?)
+	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc000188480, {0x1248c48, 0xc00018a3f0})
+	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
+ERROR	2024/06/05 16:02:33 server.go:3411: http: panic serving [::1]:54962: oops! something went wrong
+goroutine 12 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1898 +0xbe
+panic({0x1165b00?, 0x1244ef0?})
+	C:/Program Files/Go/src/runtime/panic.go:770 +0x132
+main.(*application).List(0xc000080008?, {0x12484d0, 0xc000008198}, 0xc000124900)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/handlers.go:28 +0x11e
+net/http.HandlerFunc.ServeHTTP(0xc00018c0d0?, {0x12484d0?, 0xc000008198?}, 0x11c6c7f?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0xc00002b3b0?, {0x12484d0, 0xc000008198}, 0xc000124900)
+	C:/Program Files/Go/src/net/http/server.go:2683 +0x1ad
+main.(*application).routes.secureHeaders.func2({0x12484d0, 0xc000008198}, 0xc000124900)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/middleware.go:19 +0xa8
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x12484d0?, 0xc000008198?}, 0xc0001adad8?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).routes.(*application).logRequest.func3({0x1248620, 0xc000156380}, 0xc000124900)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/middleware.go:30 +0x1ed
+net/http.HandlerFunc.ServeHTTP(0xf25639?, {0x1248620?, 0xc000156380?}, 0xc0001adb68?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.serverHandler.ServeHTTP({0xc00002b320?}, {0x1248620?, 0xc000156380?}, 0x6?)
+	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc00014a360, {0x1248c48, 0xc00018a3f0})
+	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
+ERROR	2024/06/05 16:02:33 server.go:3411: http: panic serving [::1]:54963: oops! something went wrong
+goroutine 23 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1898 +0xbe
+panic({0x1165b00?, 0x1244ef0?})
+	C:/Program Files/Go/src/runtime/panic.go:770 +0x132
+main.(*application).List(0xc000080008?, {0x12484d0, 0xc000192228}, 0xc0001ba5a0)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/handlers.go:28 +0x11e
+net/http.HandlerFunc.ServeHTTP(0xc00018c0d0?, {0x12484d0?, 0xc000192228?}, 0x11c6c7f?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0xc00018a9c0?, {0x12484d0, 0xc000192228}, 0xc0001ba5a0)
+	C:/Program Files/Go/src/net/http/server.go:2683 +0x1ad
+main.(*application).routes.secureHeaders.func2({0x12484d0, 0xc000192228}, 0xc0001ba5a0)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/middleware.go:19 +0xa8
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x12484d0?, 0xc000192228?}, 0xc000069ad8?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).routes.(*application).logRequest.func3({0x1248620, 0xc000198c40}, 0xc0001ba5a0)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/middleware.go:30 +0x1ed
+net/http.HandlerFunc.ServeHTTP(0xf25639?, {0x1248620?, 0xc000198c40?}, 0xc000069b68?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.serverHandler.ServeHTTP({0xc00018a930?}, {0x1248620?, 0xc000198c40?}, 0x6?)
+	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc000188510, {0x1248c48, 0xc00018a3f0})
+	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
+ERROR	2024/06/05 16:02:33 server.go:3411: http: panic serving [::1]:54964: oops! something went wrong
+goroutine 25 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1898 +0xbe
+panic({0x1165b00?, 0x1244ef0?})
+	C:/Program Files/Go/src/runtime/panic.go:770 +0x132
+main.(*application).List(0xc000063808?, {0x12484d0, 0xc000192258}, 0xc0001ba6c0)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/handlers.go:28 +0x11e
+net/http.HandlerFunc.ServeHTTP(0xc00018c0d0?, {0x12484d0?, 0xc000192258?}, 0x11c6c7f?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0xc00018ab40?, {0x12484d0, 0xc000192258}, 0xc0001ba6c0)
+	C:/Program Files/Go/src/net/http/server.go:2683 +0x1ad
+main.(*application).routes.secureHeaders.func2({0x12484d0, 0xc000192258}, 0xc0001ba6c0)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/middleware.go:19 +0xa8
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x12484d0?, 0xc000192258?}, 0xc000069ad8?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).routes.(*application).logRequest.func3({0x1248620, 0xc000198e00}, 0xc0001ba6c0)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/middleware.go:30 +0x1ed
+net/http.HandlerFunc.ServeHTTP(0xf25639?, {0x1248620?, 0xc000198e00?}, 0xc000069b68?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.serverHandler.ServeHTTP({0xc00018aab0?}, {0x1248620?, 0xc000198e00?}, 0x6?)
+	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc0001886c0, {0x1248c48, 0xc00018a3f0})
+	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
+ERROR	2024/06/05 16:04:41 server.go:3411: http: panic serving [::1]:54971: oops! something went wrong
+goroutine 14 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1898 +0xbe
+panic({0x1165b00?, 0x1244ef0?})
+	C:/Program Files/Go/src/runtime/panic.go:770 +0x132
+main.(*application).List(0xc000080008?, {0x12484d0, 0xc0000081c8}, 0xc000124a20)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/handlers.go:28 +0x11e
+net/http.HandlerFunc.ServeHTTP(0xc00018c0d0?, {0x12484d0?, 0xc0000081c8?}, 0x11c6c7f?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0xc00002b530?, {0x12484d0, 0xc0000081c8}, 0xc000124a20)
+	C:/Program Files/Go/src/net/http/server.go:2683 +0x1ad
+main.(*application).routes.secureHeaders.func2({0x12484d0, 0xc0000081c8}, 0xc000124a20)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/middleware.go:19 +0xa8
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x12484d0?, 0xc0000081c8?}, 0xc0001adad8?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).routes.(*application).logRequest.func3({0x1248620, 0xc000156540}, 0xc000124a20)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/middleware.go:30 +0x1ed
+net/http.HandlerFunc.ServeHTTP(0xf25639?, {0x1248620?, 0xc000156540?}, 0xc0001adb68?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.serverHandler.ServeHTTP({0xc00002b4a0?}, {0x1248620?, 0xc000156540?}, 0x6?)
+	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc00014a510, {0x1248c48, 0xc00018a3f0})
+	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
+ERROR	2024/06/05 16:04:41 server.go:3411: http: panic serving [::1]:54972: oops! something went wrong
+goroutine 27 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1898 +0xbe
+panic({0x1165b00?, 0x1244ef0?})
+	C:/Program Files/Go/src/runtime/panic.go:770 +0x132
+main.(*application).List(0xc000080008?, {0x12484d0, 0xc0000081f8}, 0xc0001ba7e0)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/handlers.go:28 +0x11e
+net/http.HandlerFunc.ServeHTTP(0xc00018c0d0?, {0x12484d0?, 0xc0000081f8?}, 0x11c6c7f?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0xc00002b620?, {0x12484d0, 0xc0000081f8}, 0xc0001ba7e0)
+	C:/Program Files/Go/src/net/http/server.go:2683 +0x1ad
+main.(*application).routes.secureHeaders.func2({0x12484d0, 0xc0000081f8}, 0xc0001ba7e0)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/middleware.go:19 +0xa8
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x12484d0?, 0xc0000081f8?}, 0xc000069ad8?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).routes.(*application).logRequest.func3({0x1248620, 0xc000156700}, 0xc0001ba7e0)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/middleware.go:30 +0x1ed
+net/http.HandlerFunc.ServeHTTP(0xf25639?, {0x1248620?, 0xc000156700?}, 0xc000069b68?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.serverHandler.ServeHTTP({0xc00018ac30?}, {0x1248620?, 0xc000156700?}, 0x6?)
+	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc000188870, {0x1248c48, 0xc00018a3f0})
+	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
+ERROR	2024/06/05 16:04:41 server.go:3411: http: panic serving [::1]:54973: oops! something went wrong
+goroutine 28 [running]:
+net/http.(*conn).serve.func1()
+	C:/Program Files/Go/src/net/http/server.go:1898 +0xbe
+panic({0x1165b00?, 0x1244ef0?})
+	C:/Program Files/Go/src/runtime/panic.go:770 +0x132
+main.(*application).List(0xc000080008?, {0x12484d0, 0xc000008228}, 0xc000124b40)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/handlers.go:28 +0x11e
+net/http.HandlerFunc.ServeHTTP(0xc00018c0d0?, {0x12484d0?, 0xc000008228?}, 0x11c6c7f?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.(*ServeMux).ServeHTTP(0xc00002b740?, {0x12484d0, 0xc000008228}, 0xc000124b40)
+	C:/Program Files/Go/src/net/http/server.go:2683 +0x1ad
+main.(*application).routes.secureHeaders.func2({0x12484d0, 0xc000008228}, 0xc000124b40)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/middleware.go:19 +0xa8
+net/http.HandlerFunc.ServeHTTP(0x0?, {0x12484d0?, 0xc000008228?}, 0xc0002adad8?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.(*application).routes.(*application).logRequest.func3({0x1248620, 0xc0001568c0}, 0xc000124b40)
+	C:/Users/SojanPhilip/Documents/Todo/cmd/web/middleware.go:30 +0x1ed
+net/http.HandlerFunc.ServeHTTP(0xf25639?, {0x1248620?, 0xc0001568c0?}, 0xc0002adb68?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.serverHandler.ServeHTTP({0xc00002b6b0?}, {0x1248620?, 0xc0001568c0?}, 0x6?)
+	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
+net/http.(*conn).serve(0xc000188900, {0x1248c48, 0xc00018a3f0})
+	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
+created by net/http.(*Server).Serve in goroutine 1
+	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4

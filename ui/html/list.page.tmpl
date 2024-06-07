@@ -1,0 +1,25 @@
+{{template "base" .}}
+ 
+{{define "title"}}Home{{end}}
+ 
+{{define "body"}}
+    <h2> Todo List </h2>
+    <form action="/tasks/add" method="post">
+        <input type="text" name="name" placeholder="Name">
+        <input type="submit" value="Add">
+    </form>
+    <ul>
+    <h1>Your task</h1>
+        {{range .}}
+            <li>{{.Title}}<br>{{.Created}}<br>{{.Expires}}</li>
+           <form action="/tasks/delete?id={{.ID}}" method="post">
+                <input type="hidden" name="_method" value="delete">
+                <input type="submit" value="Delete">
+            </form>
+            <form action="/tasks/updateform?id={{.ID}}" method="post">
+                <input type="text" name="message">
+                <input type="submit" value="Update">
+            </form>
+        {{end}}
+    </ul>
+{{end}}
